@@ -4,7 +4,7 @@ const TodoItem = ({ todo, onToggle, onRemove }) => {
   return (
     <div>
       <input type="checkbox" onClick={onClickCheck} checked={todo.done} readOnly={true} id={`chk_${todo.id}`} />
-      <label htmlFor={`chk_${todo.id}`}>
+      <label htmlFor={`chk_${todo.id}`} style={{ display: 'inline-block', width: '220px' }}>
         <span style={{ textDecoration: todo.done ? 'line-through' : 'none' }}>{todo.text}</span>
       </label>
       {/* <button onClick={onRemove}>삭제</button> */}
