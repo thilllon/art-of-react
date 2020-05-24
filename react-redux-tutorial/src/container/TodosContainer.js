@@ -4,7 +4,16 @@ import { connect } from 'react-redux';
 import Todos from '../components/Todos';
 import { changeInput, insert, toggle, remove } from '../modules/todos';
 
-const TodosContainer = ({ input, todos, changeInput, insert, toggle, remove }) => <Todos input={input} todos={todos} onChangeInput={changeInput} onInsert={insert} onToggle={toggle} onRemove={remove} />;
+const TodosContainer = ({ input, todos, changeInput, insert, toggle, remove }) => (
+  <Todos
+    input={input}
+    todos={todos}
+    onChangeInput={changeInput}
+    onInsert={insert}
+    onToggle={toggle}
+    onRemove={remove}
+  />
+);
 // type 1 ********
 // debugger;
 // state: store에 저장된 state
