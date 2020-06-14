@@ -43,9 +43,12 @@ const Todos = ({
   };
   return (
     <div>
+      <hr />
       <form onSubmit={onSubmit}>
         <input value={input} onChange={onChange} type="text" />
-        <button type="submit">등록</button>
+        <button type="submit" disabled={input.length === 0}>
+          등록
+        </button>
       </form>
       <div>
         {todos.map((todo) => (

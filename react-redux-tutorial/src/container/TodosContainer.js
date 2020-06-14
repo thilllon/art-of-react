@@ -93,8 +93,11 @@ const TodosContainer = React.memo(() => {
   // const onToggle = useCallback((id) => dispatch(toggle(id)), [dispatch]);
   // const onRemove = useCallback((id) => dispatch(remove(id)), [dispatch]);
 
+  // 여러개의 이벤트 핸들러를 각각 useCallback 처리하는 대신 useActions 사용
   // useActions안에 이미 useMemo 처리가 되어있음
   const [onChangeInput, onInsert, onToggle, onRemove] = useActions([changeInput, insert, toggle, remove], []);
+
+  // return representional component
   return (
     <Todos
       input={input}

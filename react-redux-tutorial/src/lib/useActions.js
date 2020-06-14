@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useMemo } from 'react';
 
 export default function useActions(actions, deps) {
+  // deps: dependencies
   const dispatch = useDispatch();
   return useMemo(
     () => {

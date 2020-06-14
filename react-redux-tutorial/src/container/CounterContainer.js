@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 // import { bindActionCreators } from 'redux';
 import { connect, useSelector, useDispatch } from 'react-redux';
 import Counter from '../components/Counter';
-import { increase as increaseActionCreator, decrease as decreaseActionCreator, increase } from '../modules/counter';
+import { increase as increaseActionCreator, decrease as decreaseActionCreator } from '../modules/counter';
 
 // const CounterContainer = ({ number, increase, decrease }) => {
 //   return <Counter number={number} onIncrease={increase} onDecrease={decrease} />;
@@ -67,10 +67,17 @@ const CounterContainer = () => {
   // const onIncrease = () => dispatch(increaseActionCreator());
   // const onDecrease = () => dispatch(decreaseActionCreator());
   // useCallback 사용
-  // CounterComponent 랜더링 될때마다 onIncrease, onDecrease 함수 새로 정의되는걸 방지하기 위해
+  // CounterComponent 랜더링 될때마다
+  // onIncrease, onDecrease 함수 새로 정의되는걸 방지하기 위해
   // useDispatch는 useCallback과 같이 사용 추천!!
   const onIncrease = useCallback(() => dispatch(increaseActionCreator()), [dispatch]);
   const onDecrease = useCallback(() => dispatch(decreaseActionCreator()), [dispatch]);
+
+  // 여러개의 이벤트 핸들러를 각각 useCallback 처리하는 대신 useActions 사용
+  // useActions안에 이미 useMemo 처리가 되어있음
+  // const [onIncrease, onDecrease] = useActions([increaseActionCreator, decreaseActionCreator], []);
+
+  // return representional component
   return <Counter number={number} onIncrease={onIncrease} onDecrease={onDecrease} />;
 };
 export default CounterContainer;
