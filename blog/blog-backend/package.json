@@ -1,0 +1,28 @@
+{
+  "name": "blog-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "koa": "^2.12.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^9.0.1",
+    "mongoose": "^5.9.19",
+    "shortid": "^2.2.15",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "faker": "^4.1.0",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node --experimental-modules src/index.js",
+    "start:dev": "nodemon --watch src/ src/index.js"
+  }
+}
