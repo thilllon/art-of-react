@@ -23,27 +23,27 @@ class App extends Component {
       {
         id: 0,
         name: "김민준",
-        phone: "010-0000-0000"
+        phone: "010-0000-0000",
       },
       {
         id: 1,
         name: "홍길동",
-        phone: "010-0000-0001"
-      }
-    ]
+        phone: "010-0000-0001",
+      },
+    ],
   };
-  handleRegister = data => {
+  handleRegister = (data) => {
     console.info("$$$$");
     console.info(this);
     const { information } = this.state;
     this.setState({
-      information: information.concat({ id: this.id++, ...data })
+      information: information.concat({ id: this.id++, ...data }),
     });
   };
-  handleRemove = id => {
+  handleRemove = (id) => {
     const { information } = this.state;
     this.setState({
-      information: information.filter(info => info.id !== id)
+      information: information.filter((info) => info.id !== id),
     });
   };
 

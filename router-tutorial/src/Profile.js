@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 const data = {
-    velopert:{
-        name:'김민준',
-    }
-}
+  velopert: {
+    name: "김민준",
+  },
+};

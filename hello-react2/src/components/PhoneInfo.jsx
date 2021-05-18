@@ -7,18 +7,16 @@ class PhoneInfo extends Component {
     info: {
       name: "이름",
       phone: "010-0000-0000",
-      id: 0
-    }
+      id: 0,
+    },
   };
 
-  handgleToggleEdit = ()=>{
-
-  }
+  handgleToggleEdit = () => {};
   render() {
     const style = {
       border: "1px solid black",
       padding: "8px",
-      margin: "8px"
+      margin: "8px",
     };
 
     const { name, phone, id } = this.props.info;

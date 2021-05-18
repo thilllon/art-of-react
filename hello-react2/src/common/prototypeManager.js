@@ -1,3 +1,3 @@
-String.prototype.rnd = function() {
+String.prototype.rnd = function () {
   console.info("##");
 };

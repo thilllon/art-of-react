@@ -3,18 +3,18 @@ import React, { Component } from "react";
 class PhoneForm extends Component {
   state = {
     name: "",
-    phone: ""
+    phone: "",
   };
-  handleChange = e => {
+  handleChange = (e) => {
     console.info("##", [e.target.name], e.target.value);
     this.setState({
       //   name: e.target.value
       //   phone:e.target.value
-      [e.target.name]: e.target.value || ""
+      [e.target.name]: e.target.value || "",
     });
     // value={this.state.fields.name || ''}   // (undefined || '') = ''
   };
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     // debugger;
     // 페이지 리로딩 방지
     e.preventDefault();
@@ -23,7 +23,7 @@ class PhoneForm extends Component {
     // 상태 초기화
     this.setState({
       name: "",
-      phone: ""
+      phone: "",
     });
   };
 

@@ -11,4 +11,4 @@ class MyName extends Component {
 }
 
 export default MyName;
-f
+f;

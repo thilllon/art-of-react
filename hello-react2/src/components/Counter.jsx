@@ -35,7 +35,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    number: 0
+    number: 0,
   };
 
   constructor(props) {
@@ -69,13 +69,13 @@ class Counter extends Component {
   handleIncrease = () => {
     const { number } = this.state;
     this.setState({
-      number: number + 1
+      number: number + 1,
     });
   };
 
   handleDecrease = () => {
     this.setState(({ number }) => ({
-      number: number - 1
+      number: number - 1,
     }));
   };
 

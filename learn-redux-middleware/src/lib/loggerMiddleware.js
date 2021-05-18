@@ -3,7 +3,6 @@ const loggerMiddleWare = (store) => (next) => (action) => {
   // store: 리덕스 스토어
   // action: 디스패치된 액션
   // next: 함수
-  
 };
 
 // const loggerMiddleWare = function (store) {

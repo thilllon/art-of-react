@@ -5,12 +5,12 @@ class ScrollBox extends Component {
   id = 2;
 
   state = {
-    array: [1]
+    array: [1],
   };
 
   handleInsert = () => {
     this.setState({
-      array: [this.id++, ...this.state.array]
+      array: [this.id++, ...this.state.array],
     });
   };
 
@@ -26,7 +26,7 @@ class ScrollBox extends Component {
       // 여기서 반환 하는 값은 componentDidMount 에서 snapshot 값으로 받아올 수 있습니다.
       return {
         scrollTop,
-        scrollHeight
+        scrollHeight,
       };
     }
   }
@@ -41,7 +41,7 @@ class ScrollBox extends Component {
   }
 
   render() {
-    const rows = this.state.array.map(number => (
+    const rows = this.state.array.map((number) => (
       <div className="row" key={number}>
         {number}
       </div>
@@ -50,7 +50,7 @@ class ScrollBox extends Component {
     return (
       <div>
         <div
-          ref={ref => {
+          ref={(ref) => {
             this.list = ref;
           }}
           className="list"

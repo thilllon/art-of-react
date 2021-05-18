@@ -8,9 +8,9 @@ class PhoneInfoList extends Component {
       {
         id: 111,
         name: "1234",
-        phone: "010-0000-0001"
-      }
-    ]
+        phone: "010-0000-0001",
+      },
+    ],
   };
 
   render() {
@@ -22,7 +22,6 @@ class PhoneInfoList extends Component {
         key={Math.floor(Math.random() * 1000)}
         info={elem}
         onRemove={this.props.onRemove}
-        
       />
     ));
     console.info(list);
