@@ -19,20 +19,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 );
-
-// debugger;
-// class A extends Object {
-//   showA() {}
-// }
-// class B extends A {
-//   showB() {}
-// }
-// class C extends B {
-//   showC() {}
-// }
-// var a = new A();
-// var b = new B();
-// var c = new C();
-// console.info(a.__proto__);
-// console.info(a.prototype);
-// console.info(a.constructor);
