@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import faker from 'faker';
-import { TodoForm } from './TodoForm';
-import { TodoItemList } from './TodoItemList';
-import { TodoListTemplate } from './TodoListTemplate';
+import { TodoForm } from './components/TodoForm';
+import { TodoItemList } from './components/TodoItemList';
+import { TodoListTemplate } from './components/TodoListTemplate';
 
 class ToDoList extends Component {
   constructor(props) {

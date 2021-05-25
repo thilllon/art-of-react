@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 class Counter extends Component {
   constructor(props) {
     super(props);
-    console.info("0 contructor");
+    console.info('0 contructor');
   }
   state = {
     countNumber: 0,
@@ -15,7 +15,7 @@ class Counter extends Component {
     // 외부 라이브러리 연동: D3, masonry, etc
     // 컴포넌트에서 필요한 데이터 요청: Ajax, GraphQL, etc
     // DOM 에 관련된 작업: 스크롤 설정, 크기 읽어오기 등
-    console.info("1 componentDidMount");
+    console.info('1 componentDidMount');
   }
   // @deprecated
   // componentWillReceiveProps(nextProps) {
@@ -29,7 +29,7 @@ class Counter extends Component {
     // 특정 props 가 바뀔 때 설정하고 설정하고 싶은 state 값을 리턴하는 형태로
     // 사용됩니다.
 
-    console.info("3 getDerivedStateFromProps");
+    console.info('3 getDerivedStateFromProps');
 
     // if (nextProps.value !== prevState.value) {
     // 	return { value: nextProps.value };
@@ -40,7 +40,7 @@ class Counter extends Component {
     // 컴포넌트를 최적화하는 작업에 사용
     // return false 하면 업데이트를 안함
     // return this.props.checked !== nextProps.checked
-    console.info("4 shouldComponentUpdate");
+    console.info('4 shouldComponentUpdate');
 
     return true;
   }
@@ -51,12 +51,12 @@ class Counter extends Component {
   getSnapshotBeforeUpdate(prevProps, prevState) {
     // DOM 업데이트가 일어나기 직전의 시점입니다.
     // render() -> getSnapshotBeforeUpdate() -> 실제 DOM 에 변화 발생 -> <필수>componentDidUpdate()
-    console.info("6 getSnapshotBeforeUpdate");
+    console.info('6 getSnapshotBeforeUpdate');
     var snapshot = {};
     return snapshot;
   }
   componentDidUpdate() {
-    console.info("7 componentDidUpdate");
+    console.info('7 componentDidUpdate');
   }
 
   static defaultProps = {
@@ -65,13 +65,13 @@ class Counter extends Component {
 
   // **********
   handleIncrease = () => {
-    console.log("increase");
+    console.log('increase');
     this.setState({
       countNumber: this.state.countNumber + 1,
     });
   };
   handleDecrease = () => {
-    console.log("decrease");
+    console.log('decrease');
     this.setState({
       countNumber: this.state.countNumber - 1,
     });
@@ -82,10 +82,10 @@ class Counter extends Component {
       <div>
         <h1>카운터</h1>
         <span>{this.state.countNumber}</span>
-        <button id="increaseButton" onClick={this.handleIncrease}>
+        <button id='increaseButton' onClick={this.handleIncrease}>
           +
         </button>
-        <button id="decreaseButton" onClick={this.handleDecrease}>
+        <button id='decreaseButton' onClick={this.handleDecrease}>
           -
         </button>
       </div>

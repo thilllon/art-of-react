@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LazySplitMe = () => {
+export const LazySplitMe = () => {
   return <div>Lazy Split Me</div>;
 };
 

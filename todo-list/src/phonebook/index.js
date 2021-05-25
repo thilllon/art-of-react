@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PhoneForm from './components/PhoneForm.jsx';
 import PhoneInfoList from './components/PhoneInfoList';
 
-class HelloReact extends Component {
+class Phonebook extends Component {
   id = 2;
   state = {
     information: [
@@ -68,7 +68,6 @@ class HelloReact extends Component {
             // value={keyword}
           />
         </p>
-        <hr />
         <PhoneInfoList
           data={filteredList}
           onRemove={this.handleRemove}
@@ -79,4 +78,4 @@ class HelloReact extends Component {
   }
 }
 
-export default HelloReact;
+export default Phonebook;

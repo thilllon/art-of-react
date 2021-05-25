@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import PhoneInfo from "./PhoneInfo";
+import React, { Component } from 'react';
+import PhoneInfo from './PhoneInfo';
 
-class PhoneInfoList extends Component {
+export default class PhoneInfoList extends Component {
   static defaultProps = {
     data: [],
-    onRemove: () => console.warn("onRemove not defined"),
-    onUpdate: () => console.warn("onUpdate not defined"),
+    onRemove: () => console.warn('onRemove not defined'),
+    onUpdate: () => console.warn('onUpdate not defined'),
   };
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -16,7 +16,6 @@ class PhoneInfoList extends Component {
   }
 
   render() {
-    console.log("render PhoneInfoList");
     const { data, onRemove, onUpdate } = this.props;
     const list = data.map((elem) => (
       <PhoneInfo
@@ -30,5 +29,3 @@ class PhoneInfoList extends Component {
     return <div>{list}</div>;
   }
 }
-
-export default PhoneInfoList;

@@ -1,9 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class ButtonSet extends Component {
-  // state
-  // props
-
   static defaultProps = {
     //
   };

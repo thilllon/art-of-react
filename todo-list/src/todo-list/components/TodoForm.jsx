@@ -1,5 +1,4 @@
 import React from 'react';
-import './TodoListTemplate.css';
 
 export const TodoForm = ({ value, onKeyPress, onChange, onCreate }) => {
   const onSubmit = (ev) => ev.preventDefault();
