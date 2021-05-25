@@ -11,10 +11,18 @@
     "sass-loader": "^11.1.1"
   },
   "scripts": {
+    "predev": "prettier -w .",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "jsxSingleQuote": true,
+    "jsxBracketSameLine": false
   },
   "eslintConfig": {
     "extends": "react-app"

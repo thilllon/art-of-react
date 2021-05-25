@@ -74,8 +74,13 @@ class App extends Component {
             onChange={this.handleChange}
             onCreate={this.handleCreate}
           />
-        }>
-        <TodoItemList todos={this.state.todos} onToggle={this.handleToggle} onRemove={this.handleRemove} />
+        }
+      >
+        <TodoItemList
+          todos={this.state.todos}
+          onToggle={this.handleToggle}
+          onRemove={this.handleRemove}
+        />
       </TodoListTemplate>
     );
   }
