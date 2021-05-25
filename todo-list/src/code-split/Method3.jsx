@@ -1,12 +1,11 @@
 import React, { useState, Suspense } from 'react';
 
 const LazySplitMe = React.lazy(() => {
-  const LazySplitMe = import('./components/LazySplitMe');
-  LazySplitMe.then((res) => {
-    console.info(res);
-  });
-  // debugger;
-  return LazySplitMe;
+  const SplitMe = import('./components/SplitMe');
+  // SplitMe.then((res) => {
+  //   console.info(res);
+  // });
+  return SplitMe;
 });
 
 export const Method3 = () => {

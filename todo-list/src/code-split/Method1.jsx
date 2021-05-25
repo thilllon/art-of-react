@@ -5,13 +5,16 @@ export const Method1 = () => {
     ev.preventDefault();
 
     import('./util')
-      .then((importModule) => {
-        importModule.logDate();
-        return importModule;
+      .then((module) => {
+        module.logDate();
+        return module;
       })
-      .then((importModule) => {
-        const notify = importModule.default();
-        return notify;
+      .then((module) => {
+        const notify = module.default;
+        notify();
+      })
+      .catch((err) => {
+        console.error(err);
       });
   };
 
