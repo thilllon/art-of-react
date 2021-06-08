@@ -1,6 +1,0 @@
-{
-  "folders": [{ "path": "learn-redux-middleware" }, { "path": "react-redux-tutorial" }, { "path": "splitting-sample" }],
-  "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "splitting-sample"
-  }
-}

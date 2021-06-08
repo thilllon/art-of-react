@@ -1,9 +1,6 @@
 # 리액트를 다루는 기술
-## velopert
 
-## React Tutorial Project
-
-리액트를 다루는 기술에 나오는 예제 실습 코드입니다.
+`리액트를 다루는 기술`에 나오는 예제 실습 코드입니다.
 
 ### react-redux-tutorial
 
@@ -28,10 +25,9 @@
       dynamicallyImportedModule.default(); // default export 함수 이용시
       dynamicallyImportedModule.showName(); // named export 함수 이용시
       dynamicallyImportedModule.showCompany(); // named export 함수 이용시
-      return 로드된 모듈
-  }).then(로드된 모듈 => {
+      return loadedModule
+  }).then(loadedModule => {
       // do something
-
   })
   ```
 

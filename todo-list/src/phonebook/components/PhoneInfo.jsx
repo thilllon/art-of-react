@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class PhoneInfo extends Component {
   static defaultProps = {
     info: {
-      name: "이름",
-      phone: "010-0000-0000",
+      name: '이름',
+      phone: '010-0000-0000',
       id: 0,
     },
   };
@@ -39,7 +39,7 @@ class PhoneInfo extends Component {
     // debugger;
     // 기존 값 먼저 저장
     if (!editing) {
-      console.info("기존값저장", this.state.name, this.state.phone);
+      console.info('기존값저장', this.state.name, this.state.phone);
       this.setState({
         editing: !editing,
         nameBeforeEdit: this.state.name,
@@ -71,13 +71,13 @@ class PhoneInfo extends Component {
     // this.setState({
     // 	[name]: value,
     // });
-    console.info("handleChange");
+    console.info('handleChange');
     this.setState({
       [e.target.name]: e.target.value,
     });
   };
   shouldComponentUpdate = (nextProps, nextState) => {
-    console.info("shouldComponentUpdate");
+    console.info('shouldComponentUpdate');
     // 수정 상태가 아니고, 현재 PhoneInfo 컴포넌트 인스턴스의 info 값이 같다면 리렌더링 안함
     if (
       !this.state.editing &&
@@ -95,12 +95,12 @@ class PhoneInfo extends Component {
     // 수정을 눌렀을땐, 기존의 값이 input에 나타나고,
     // 수정을 적용할땐, input 의 값들을 부모한테 전달해줍니다.
 
-    console.info("componentDidUpdate");
+    console.info('componentDidUpdate');
     const { info, onUpdate } = this.props;
 
     // 편집모드 떴을때
     if (!prevState.editing && this.state.editing) {
-      console.log("편집모드");
+      console.log('편집모드');
       // editing 값이 false -> true 로 전환 될 때
       // info 의 값을 state 에 넣어준다
       this.setState({
@@ -110,7 +110,7 @@ class PhoneInfo extends Component {
     }
     // 적용 눌러서 다시 보여줘야할때
     if (prevState.editing && !this.state.editing) {
-      console.log("보기모드");
+      console.log('보기모드');
       // editing 값이 true -> false 로 전환 될 때
       onUpdate(info.id, {
         name: this.state.name,
@@ -121,9 +121,9 @@ class PhoneInfo extends Component {
 
   render() {
     const style = {
-      border: "1px solid black",
-      padding: "8px",
-      margin: "8px",
+      border: '1px solid black',
+      padding: '8px',
+      margin: '8px',
     };
 
     const { editing } = this.state;
@@ -135,16 +135,16 @@ class PhoneInfo extends Component {
           <div>
             <input
               value={this.state.name}
-              name="name"
-              placeholder="이름"
+              name='name'
+              placeholder='이름'
               onChange={this.handleChange}
             />
           </div>
           <div>
             <input
               value={this.state.phone}
-              name="phone"
-              placeholder="전화번호"
+              name='phone'
+              placeholder='전화번호'
               onChange={this.handleChange}
             />
           </div>
