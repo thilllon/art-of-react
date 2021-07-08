@@ -9,6 +9,9 @@ import logger from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import ReduxThunk from 'redux-thunk';
 import { BrowserRouter } from 'react-router-dom';
+
+axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? '/' : 'https://api.velog.io/';
+
 const store = createStore(
   rootReducer,
   composeWithDevTools(

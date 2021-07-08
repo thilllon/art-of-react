@@ -84,3 +84,10 @@ const myThunk = () => (dispatch, getState) => {
 
 dispatch(myThunk());
 ```
+
+### CORS
+
+- 서버는 4000포트로 열었으니, 4000포트에서 오는 요청만 허용
+- 현재 리액트는 웹팩개발서버 3000포트 위에서 열려있음
+- 브라우저는 웹팩개발서버(3000)로 요청하고 웹팩개발서버는 프록시를 통해 백엔드서버(4000)으로 요청
+- `package.json`에서 `"proxy": "http://localhost:4000`
