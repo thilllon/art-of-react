@@ -38,10 +38,9 @@ connect: `container component에 리덕스 스토어의 특정 state, 특정 dis
 useSelector: store의 상태조회. 상태구조중에 뽑아낼것만 선택가능함.
 useDispatch: 디스패쳐를 리턴하는 훅. 항상 동일한 디스패쳐를 리턴함. 리 랜더링 조건에 잡히지 않음.
 
-|---|---|
-------
-|---|---|
+## |---|---|
 
+|---|---|
 
 connect: HOC방식으로 짤때필요
 
@@ -85,4 +84,27 @@ https://www.npmjs.com/package/redux-devtools-extension#usage
 ```js
 import { composeWithDevTools } from 'redux-devtools-extension';
 const store = createStore(rootReducer, composeWithDevTools);
+```
+
+## useSelector optimization
+
+```js
+// equalityFn?: (left: any, right: any) => boolean
+// shallowEqual 이용하기
+
+import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+
+function CounterContainer() {
+  // useSelector는 리덕스 스토어의 상태를 조회하는 Hook입니다.
+  // state의 값은 store.getState() 함수를 호출했을 때 나타나는 결과물과 동일합니다.
+  const { number, diff } = useSelector(
+    state => ({
+      number: state.counter.number,
+      diff: state.counter.diff
+    }),
+    shallowEqual
+  );
+
+  (...)
+
 ```
