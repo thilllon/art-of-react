@@ -11,11 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: * Build the Docker image
+      - name: Build the Docker image
         run: echo "pass"
-        run: # docker build ./learn-redux --file Dockerfile --tag kraftwerk:$(date +%s)
-        name: GitHub Actions Demo
-  
+        # run: docker build ./learn-redux --file Dockerfile --tag kraftwerk:$(date +%s)
+       
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
